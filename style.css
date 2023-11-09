@@ -1,0 +1,24 @@
+html {
+    font-size: 100%; /* 16px */
+}
+
+body {
+    color: #24292e;
+}
+
+a {
+    text-decoration: none; /* 下線消す */
+}
+
+p {
+    font-size: 1.3rem; /* 16px x 1.3倍 */
+}
+
+img {
+    max-width: 100%; /* ウインドウサイズに合わせて画像縮小 */
+}
+
+li {
+    list-style: none; /* 箇条書きの黒点を消せる */
+    font-size: 1.3rem; /* 16px x 1.2倍(Pタグよりちょっと小さめ) */
+}
