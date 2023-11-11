@@ -28,28 +28,74 @@ body {
 
     li {
         list-style: none; /* 箇条書きの黒点を消せる */
-        font-size: 1.3rem; /* 16px x 1.2倍(Pタグよりちょっと小さめ) */
+        font-size: 1.2rem; /* 16px x 1.2倍(Pタグよりちょっと小さめ) */
     }
 
     /* ------------------------------------- */
-    /* .class（body以下で横断的に使用される） */
+    /* .class（ある要素のみに適用ではなく横断的に使用される） */
     /* ------------------------------------- */
 
-
+    /* ---  各タイトル箇所共通    --- */    
+    .site-title {
+        /*  ---  自分達(タイトルに指定したタグ)の属性情報 --- */
+        line-height: 1px;   /* ?? */
+        font-weight: 600;   /* 文字を太めにする */
+        font-size: 2.4rem;   /* 文字を大き目にする */
+    }
+    .site-title a {
+        /*  ---  自分達(タイトル箇所の<a>タグ)の属性情報 --- */
+        color: #24292e; リンク文字の色
+    }
 
 
         /* ------------------------------------- */
         /* #id（ある要素タグの配下で使用される） */
         /* ------------------------------------- */
 
+        /* ---  ヘッダー    --- */
         #header {
+            /*  ---  自分(header)の属性情報 --- */
             max-width: 960px;
-            /* height: 170px; */
-           /*  自分(hesder)と子要素(<h1>と<nav>)の位置関係 */
+            padding: 0 4%;  /* 左右に自要素の幅の4%分余白を持つ */
+            height: 170px;
+            /*  ---  親要素(body)と自分(header)の関係 --- */
+            margin: 0 auto; /* headerはページ全体の中央 */
+            /*  ---  自分(header)と子要素(<h1>と<nav>)の関係 --- */
             display: flex;  /* 要素の縦横並びを指定する */
             flex-direction: row;    /* 横並びにする(既定) */
             align-items: center;    /* それぞれの子要素が自分(<header>)に対して上下中央に揃う */
-            justify-content: center;    /* 子要素全体が自分(<header>)に対して左右中央に揃う */
+            justify-content: space-between;    /* 子要素全体が自分(<header>)内で等間隔に配置される */
+                /* justify-content: center; */    /* 子要素全体が自分(<header>)に対して左右中央に揃う */
+        }
+        #header nav ul {
+            /*  ---  自分(ul)の属性情報 --- */
+            padding: 10px 0;  /* 上下に10px余白、左右余白無し */
+            /*  ---  親要素(nav)と自分(ul)の関係 --- */
+                /* 無し */
+            /*  ---  自分(ul)と子要素(li)の関係 --- */
+            display: flex;  /* 要素の縦横並びを指定する */
+            flex-direction: row;    /* 横並びにする(既定) */
+            align-items: center;    /* それぞれの子要素が自分(<header>)に対して上下中央に揃う */
+        }
+        #header nav ul li {
+            /*  ---  自分(li)の属性情報 --- */
+            font-size: 0.9rem;
+            /*  ---  親要素(body)と自分(header)の関係 --- */
+            margin-left: 30px;
+            /*  ---  自分(ul)と子要素(li)の関係 --- */
+                /* 無し */
+        }
+        #header nav ul li a {
+            /*  ---  自分(li)の属性情報 --- */
+            color: #24292e;
+                /* transition: all 0.3s;   0.3sかけてゆっくりhoverする */
+        }
+        #header nav ul li a:hover {
+            opacity: 0.5;   /* 透明度50% */
+        }
+        #header nav ul li a img.icon {
+            /*  ---  自分(twitterアイコン)の属性情報 --- */
+            width: 30px;
         }
 
 
