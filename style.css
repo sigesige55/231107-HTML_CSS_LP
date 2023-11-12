@@ -1,5 +1,6 @@
 html {
     font-size: 100%; /* 16px */
+    font-family: "Sawarabi Gothic";
 }
 
 /* ------------------------------------- */
@@ -35,16 +36,35 @@ body {
     /* .class（ある要素のみに適用ではなく横断的に使用される） */
     /* ------------------------------------- */
 
-    /* ---  各タイトル箇所共通    --- */    
+    /* ---  セクション共通    --- */    
+    .wrapper {
+        /*  ---  １．自分達(.wrapperクラス)の属性情報 --- */
+        max-width: 960px;
+        font-size: 0.9rem;
+        padding: 0 4%;  /* 余白 上下0px 左右4%ずつ */
+        /*  ---  ２．親要素<?>と自分達(.wrapperクラス)の関係 --- */
+        margin: 0 auto 130px auto; /* 左右中央 （上余白0px 右余白自動 下余白130px 左余白自動*/
+    }
+
+    /* ---  タイトル共通    --- */    
     .site-title {
-        /*  ---  自分達(タイトルに指定したタグ)の属性情報 --- */
+        /*  ---  １．自分達(タイトルに指定したタグ)の属性情報 --- */
         line-height: 1px;   /* ?? */
         font-weight: 600;   /* 文字を太めにする */
         font-size: 2.4rem;   /* 文字を大き目にする */
     }
     .site-title a {
-        /*  ---  自分達(タイトル箇所の<a>タグ)の属性情報 --- */
+        /*  ---  ２．自分達(タイトル箇所の<a>タグ)の属性情報 --- */
         color: #24292e; /* リンク文字の色 */
+    }
+
+    /* ---  セクションタイトル共通    --- */    
+    .sec-title {
+        font-size: 1.5rem;
+        text-align: center; /* 要素内でテキストをセンタリング */
+        /*  ---  ２．親要素と自分の関係 --- */
+        margin-bottom: 65px;
+    
     }
 
 
@@ -111,6 +131,45 @@ body {
             object-fit: cover;  /* 画像の縦横比を維持（見切れてもOK） */
         }
 
+        /* ---      about    --- */
+        #about ul {
+            margin-bottom: 30px;
+        }
+        #about ul li {
+            margin-bottom: 3px;
+        }
+        #about ul li:first-child{   /* リストの先頭行に適用 */
+            margin-bottom: 30px;
+        }
+
+        /* ---      works    --- */
+        #works ul {
+            /*  ---  １．自分の属性情報 --- */
+            /*  ---  ２．親要素と自分の関係 --- */
+            /*  ---  ３．自分<header>と子要素(<h1>と<nav>)の関係 --- */
+            display: flex;
+            flex-direction: row;    /* 横に配置 */
+            flex-wrap: wrap;    /* 横幅をはみ出た分の要素は折り返して次の行に配置 */
+            justify-content: space-between; /* 等間隔に配置 */
+        }
+        #works ul li {
+            /*  ---  １．自分の属性情報 --- */
+            width: 31%;
+            /*  ---  ２．親要素と自分の関係 --- */
+            margin-bottom: 23px;
+        }
+        #works ul li img {
+            /*  ---  １．自分の属性情報 --- */
+            cursor: pointer;
+            transition: all 0.3s;   /* 0.3sかけてゆっくりhoverする */
+        }
+        #works ul li img:hover {
+            /*  ---  １．自分の属性情報 --- */
+            transform: scale(1.2,1.2);  /* 縦横ともにx1.2表示 */
+            opacity: 0.7;   /* 透明度50% */
+        }
+
+      
 
 /* ------------------------------------- */
 /* スマホ用 */
