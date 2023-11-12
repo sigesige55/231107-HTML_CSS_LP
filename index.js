@@ -1,8 +1,7 @@
-setInterval(interruptMission, 1000);
-
-function updateImage() {
-
-    const imgEle = document.getElementById("card01");
-
-    imgEle.src = "/img/works.jpg" + "?" + Date.now();
-}
+document.addEventListener('DOMContentLoaded', function(){
+    const RELOAD_SPAN = 300000;
+    function reload(){
+      document.getElementById('card01').src = 'works.jpg' + '?' + Date.now();
+    }
+    setInterval(reload, RELOAD_SPAN);
+  });

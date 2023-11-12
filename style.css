@@ -120,27 +120,6 @@ body {
         }
 
         /* ---      メイン    --- */
-        #main {
-            margin-bottom: 80px;
-        }
-        #main img {
-            /*  ---  自分(#mainの<img>)の属性情報 --- */
-            width: 100%;
-            max-width: 1920px;
-            height: 400px;
-            object-fit: cover;  /* 画像の縦横比を維持（見切れてもOK） */
-        }
-
-        /* ---      about    --- */
-        #about ul {
-            margin-bottom: 30px;
-        }
-        #about ul li {
-            margin-bottom: 3px;
-        }
-        #about ul li:first-child{   /* リストの先頭行に適用 */
-            margin-bottom: 30px;
-        }
 
         /* ---      works    --- */
         #works ul {
