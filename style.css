@@ -189,11 +189,67 @@ body {
         }
         #news dl dd {
             /*  ---  １．自分の属性情報 --- */
-            width: 80%;
             border-bottom: 1px solid #c8c8c8;
             padding: 15px;
+            /*  ---  ２．親要素と自分の関係 --- */
+            width: 80%;
+      }
+
+        /* ---      Contact    --- */
+        #contact p {
+            /*  ---  １．自分の属性情報 --- */
+            text-align: center; /* 要素内でテキストをセンタリング */
+            /*  ---  ２．親要素と自分の関係 --- */
+            margin-bottom: 20px;
         }
-    
+        #contact form dl {
+            /*  ---  ３．自分<dl>と子要素達(<dt>と<dd>)の関係 --- */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;    /* 折り返す */
+        }
+        #contact form dl dt {
+            /*  ---  １．自分の属性情報 --- */
+            /*  ---  ２．親要素と自分の関係 --- */
+            width: 15%;
+            margin-bottom: 10px;
+        }
+        #contact form dl dd {
+            /*  ---  １．自分の属性情報 --- */
+            /*  ---  ２．親要素と自分の関係 --- */
+            width: 85%;
+            margin-bottom: 10px;
+        }
+        #contact form dl dd input,
+        #contact form dl dd textarea {
+            /*  ---  １．自分の属性情報 --- */
+            padding: 10px;
+            /*  ---  ２．親要素と自分の関係 --- */
+            width: 100%;
+            border: 1px solid #c8c8c8;
+        } 
+        #contact form dl dd textarea {
+            /*  ---  １．自分の属性情報 --- */
+            height: 10rem;
+        }
+        #contact form div.button {
+            /*  ---  ２．親要素と自分の関係 --- */
+            text-align: center;
+        }
+        #contact form div input {
+            /*  ---  １．自分の属性情報 --- */
+            width: 200px;
+            padding: 15px 0;
+            border: 1px solid #24292e;
+            background-color: #24292e;
+            color: #ffffff;
+            transition: all 0.3s;   /* 0.3sかけてゆっくりhoverする */
+        }
+        #contact form div input:hover {
+            background-color: #ffffff;
+            color: #24292e;
+        }
+
 
 /* ------------------------------------- */
 /* スマホ用 */
@@ -252,5 +308,26 @@ body {
             width: 100%;
             padding-top: 0;
         }
+
+        /* ---      Contact    --- */
+        #contact form dl {
+            /*  ---  ３．自分<dl>と子要素達(<dt>と<dd>)の関係 --- */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;    /* 折り返す */
+        }
+        #contact form dl dt {
+            /*  ---  １．自分の属性情報 --- */
+            /*  ---  ２．親要素と自分の関係 --- */
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        #contact form dl dd {
+            /*  ---  １．自分の属性情報 --- */
+            /*  ---  ２．親要素と自分の関係 --- */
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
 }
 
