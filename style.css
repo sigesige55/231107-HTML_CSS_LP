@@ -146,6 +146,7 @@ body {
         #works ul {
             /*  ---  １．自分の属性情報 --- */
             /*  ---  ２．親要素と自分の関係 --- */
+            margin-bottom: 50px;
             /*  ---  ３．自分<header>と子要素(<h1>と<nav>)の関係 --- */
             display: flex;
             flex-direction: row;    /* 横に配置 */
@@ -202,6 +203,14 @@ body {
             width: 20px;
             /*  ---  ２．親要素<li>と自分<img.icon>の関係 --- */
             margin-top: 15px;
+        }
+
+        /* ---      works    --- */
+        #works ul {
+            flex-direction: column; /* 縦並びに変更 */
+        }
+        #works ul li {
+            width: 100%; /* 一列なので100%に戻す */
         }
 
 }
