@@ -54,13 +54,13 @@ body {
 
         /* ---  ヘッダー    --- */
         #header {
-            /*  ---  自分(header)の属性情報 --- */
+            /*  ---  １．自分(header)の属性情報 --- */
             max-width: 960px;
             padding: 0 4%;  /* 左右に自要素の幅の4%分余白を持つ */
             height: 170px;
-            /*  ---  親要素(body)と自分(header)の関係 --- */
+            /*  ---  ２．親要素(body)と自分(header)の関係 --- */
             margin: 0 auto; /* headerはページ全体の中央 */
-            /*  ---  自分(header)と子要素(<h1>と<nav>)の関係 --- */
+            /*  ---  ３．自分(header)と子要素(<h1>と<nav>)の関係 --- */
             display: flex;  /* 要素の縦横並びを指定する */
             flex-direction: row;    /* 横並びにする(既定) */
             align-items: center;    /* それぞれの子要素が自分(<header>)に対して上下中央に揃う */
@@ -86,11 +86,12 @@ body {
                 /* 無し */
         }
         #header nav ul li a {
-            /*  ---  自分(li)の属性情報 --- */
+            /*  ---  自分(a)の属性情報 --- */
             color: #24292e;
                 /* transition: all 0.3s;   0.3sかけてゆっくりhoverする */
         }
         #header nav ul li a:hover {
+            /*  ---  自分(a:hover)の属性情報 --- */
             opacity: 0.5;   /* 透明度50% */
         }
         #header nav ul li a img.icon {
@@ -98,4 +99,38 @@ body {
             width: 30px;
         }
 
+/* ------------------------------------- */
+/* スマホ用 */
+/* ------------------------------------- */
+
+/* 最大600pxまで */
+@media screen and (max-width: 600px) {
+    .site-title {
+        margin-top: 20px;
+    }
+        /* ---  ヘッダー    --- */
+        #header {
+            /*  ---  １．自分<header>の属性情報 --- */
+            height: auto;   /* 高さ自動 */
+            line-height: 40px;  /* 行の高さ40px ☆この指定がないとツイッターアイコンが下に寄る(理由??) */
+            /*  ---  ２．親要素<body>と自分<header>の関係 --- */
+            margin-top: 20px;   /* 上余白20px (header全体が上に寄って見切れていたため)*/
+            /*  ---  ３．自分<header>と子要素(<h1>と<nav>)の関係 --- */
+            display: flex;  /* 要素の縦横並びを指定する */
+            flex-direction: column;    /* 縦並びにする */
+        }
+        #header nav ul li {
+            /*  ---  １．自分<li>の属性情報 --- */
+            font-size: 0.8rem;
+            /*  ---  ２．親要素<ul>と自分<li>の関係 --- */
+            margin-left: 20px;
+        }
+        #header nav ul li a img.icon {
+            /*  ---  １．自分(twitterアイコン)の属性情報 --- */
+            width: 20px;
+            /*  ---  ２．親要素<li>と自分<img.icon>の関係 --- */
+            margin-top: 15px;
+        }
+
+}
 
